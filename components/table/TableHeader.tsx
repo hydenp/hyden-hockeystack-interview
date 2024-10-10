@@ -3,7 +3,7 @@ import { ColumnDef } from "./type";
 import styled from "styled-components";
 
 const StyledTableHeader = styled.thead`
-  background-color: #ffffff44;
+  background-color: var(--table-header);
   border-bottom: 1px solid #ffffff44;
 `;
 
@@ -13,7 +13,7 @@ const StyledTableHeaderCell = styled.th`
   cursor: pointer;
   transition: background-color 0.3s;
   &:hover {
-    background-color: #ffffff44;
+    background-color: var(--hover-bg);
   }
 `;
 
@@ -50,7 +50,7 @@ export const TableHeader = ({
             style={{
               padding: 10,
               maxWidth: column.maxWidth
-                ? `${column.maxWidth}px !important`
+                ? `${column.maxWidth}px`
                 : undefined,
             }}
             onClick={() => {
@@ -60,6 +60,7 @@ export const TableHeader = ({
             <div
               style={{
                 display: "flex",
+                cursor: "pointer",
                 flex: 1,
                 height: "100%",
                 alignItems: "center",

@@ -11,9 +11,10 @@ const StyledTable = styled.table<{ columns: ColumnDef[] }>`
 
   border-radius: 12px;
   overflow: hidden;
+  width: 100%;
 
   grid-template-columns: ${({ columns }) =>
-    columns.map((column) => `minmax(500px, ${column.width}fr)`).join(" ")};
+    columns.map((column) => `minmax(${column.width}fr, 1000px)`).join(" ")};
 
   //   thead,
   //   tbody,

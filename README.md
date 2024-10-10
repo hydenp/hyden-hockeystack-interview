@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Hyden HockeyStack Table
 
-## Getting Started
 
-First, run the development server:
+I found this resource really helpful:
+https://adamlynch.com/flexible-data-tables-with-css-grid/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Improvements I'd like to make:
+- add a loading state for data
+- instead of pagination, make it infinite scrolling instead, I hate unecessary clicks in general
+- could be helpful to add a search functionality, depending on the dataset
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I'd also like to improve the styling of the table, it's a little bland as is, and long headers don't look great.
+I think I could improve the header design a lot with some better overflow handling so they are not multiple lines, maybe some hover state or something.
+The sort buttons also feel a little "light", and could use improvement.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -10,8 +10,8 @@ const COLUMNS: ColumnDef[] = [
   {
     key: "url",
     title: "URL",
-    width: 100,
-    maxWidth: 500,
+    width: 10,
+    maxWidth: 300,
     rightIcon: "open_in_new",
     action: (row) => {
       window.open(
@@ -41,11 +41,11 @@ export default function Home() {
     score: (row.totalVisitorCount - row.bounceCount).toFixed(2),
   }));
 
-  const [withPagination, setWithPagination] = useState(false);
+  const [withPagination, setWithPagination] = useState(true);
 
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
+      <main className={styles.main} style={{ width: "100%" }}>
         <h1>Dashboard</h1>
         <button
           style={{

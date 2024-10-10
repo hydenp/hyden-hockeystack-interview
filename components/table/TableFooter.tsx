@@ -3,7 +3,7 @@ import { Row } from "./type";
 import { Icon } from "../Icon";
 
 const StyledTableFooter = styled.tfoot`
-  background-color: #ffffff44;
+  background-color: var(--table-header);
 
   padding: 10px;
 `;
@@ -20,55 +20,57 @@ export const TableFooter = ({ page, setPage, rows, pageSize }: Props) => {
 
   return (
     <StyledTableFooter>
-      <td
-        colSpan={10}
-        style={{
-          padding: "10px 20px",
-        }}
-      >
-        <div
+      <tr>
+        <td
+          colSpan={10}
           style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
+            padding: "10px 20px",
           }}
         >
           <div
             style={{
               display: "flex",
-              gap: 10,
-              color: "white",
+              justifyContent: "flex-end",
               alignItems: "center",
             }}
           >
-            <p style={{ fontSize: 14 }}>
-              Page: {page + 1} of {totalPages}
-            </p>
-            <Icon
+            <div
               style={{
-                cursor: "pointer",
+                display: "flex",
+                gap: 10,
+                color: "var(--text-primary)",
+                alignItems: "center",
               }}
-              icon="chevron_left"
-              onClick={() => {
-                if (page > 0) {
-                  setPage(page - 1);
-                }
-              }}
-            />
-            <Icon
-              onClick={() => {
-                if (page < totalPages - 1) {
-                  setPage(page + 1);
-                }
-              }}
-              style={{
-                cursor: "pointer",
-              }}
-              icon="chevron_right"
-            />
+            >
+              <p style={{ fontSize: 14 }}>
+                Page: {page + 1} of {totalPages}
+              </p>
+              <Icon
+                style={{
+                  cursor: "pointer",
+                }}
+                icon="chevron_left"
+                onClick={() => {
+                  if (page > 0) {
+                    setPage(page - 1);
+                  }
+                }}
+              />
+              <Icon
+                onClick={() => {
+                  if (page < totalPages - 1) {
+                    setPage(page + 1);
+                  }
+                }}
+                style={{
+                  cursor: "pointer",
+                }}
+                icon="chevron_right"
+              />
+            </div>
           </div>
-        </div>
-      </td>
+        </td>
+      </tr>
     </StyledTableFooter>
   );
 };
